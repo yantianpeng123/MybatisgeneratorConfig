@@ -6,11 +6,17 @@
 <generatorConfiguration>
 	<!-- 驱动程序(在classpath中已存在驱动的情况下不需要) -->
 	<classPathEntry location="/Users/yantianpeng/Desktop/mybatisgenerator/mysql-connector-java-8.0.13.jar" />  
+	<!-- 设置targetRuntime 属性值是：MyBatis3Simple defaultModelType:属性值flat是
+		不会生成与Example 查询相关的内容
+	-->
 	<context id="context1" targetRuntime="MyBatis3Simple" defaultModelType="flat">
-		<!-- 注释 -->
+		<!-- 注释 suppressAllComments 为false会生成注释	当设置为true不会生成注释，并且代码合并
+		功能会被禁用
+				suppressAllComments 表示是否会生成注释，默认是false设置为true是 不包含注释。
+		 -->
 		<commentGenerator>
-			<property name="suppressAllComments" value="true" />
-			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressAllComments" value="false" />
 		</commentGenerator>
  
 		<!-- 数据库连接 -->
